@@ -50,3 +50,12 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 .cat-game .cat-pupil-left{left:49px}.cat-game .cat-pupil-right{left:85px}
 .cat-game .zzz{right:-47px;top:35px}
 @media(max-width:620px){.cat.cat-game{left:36%;top:124px;width:128px;height:128px}.cat-game .cat-sleeping-pose{width:205px;height:103px;left:-33px;top:31px}.cat-game .cat-pupil{top:49px;width:11px;height:13px}.cat-game .cat-pupil-left{left:42px}.cat-game .cat-pupil-right{left:73px}.cat.cat-game.sleeping{transform:translateX(-50%) rotate(-4deg)}.cat-game .zzz{right:-42px;top:28px}}
+
+/* One complete animated eye system replaces the baked-in eyes visually. */
+.cat-game .cat-eye{position:absolute;top:46px;width:30px;height:35px;border:3px solid #071542;border-radius:48% 48% 52% 52%;background:#fff9e9;overflow:hidden;z-index:3;box-shadow:0 0 0 4px #ffefd1;pointer-events:none}
+.cat-game .cat-eye-left{left:43px}.cat-game .cat-eye-right{left:78px}
+.cat-game .cat-eye .cat-pupil{position:absolute;left:6px;top:7px;width:13px;height:17px;border:0;border-radius:50%;background:linear-gradient(#06143f 0 67%,#087970 68%);transform:translate(var(--eye-x,0),var(--eye-y,0));transition:transform .07s linear;box-shadow:inset 0 -3px rgba(25,226,190,.36)}
+.cat-game .cat-eye .cat-pupil::before{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;left:2px;top:2px}
+.cat-game .cat-eye .cat-pupil::after{content:"";position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;right:2px;bottom:3px}
+.cat-game.sleeping .cat-eye{opacity:0}
+@media(max-width:620px){.cat-game .cat-eye{top:39px;width:27px;height:32px;border-width:3px;box-shadow:0 0 0 3px #ffefd1}.cat-game .cat-eye-left{left:37px}.cat-game .cat-eye-right{left:67px}.cat-game .cat-eye .cat-pupil{left:5px;top:6px;width:12px;height:16px}}
