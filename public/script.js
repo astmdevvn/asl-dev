@@ -21,20 +21,29 @@
     if (audioContext.state === 'suspended') audioContext.resume();
   }
 
-  function tone(frequency, duration = .18, type = 'sine', volume = .025) {
+  function tone(frequency, duration = 1.15, type = 'sine', volume = .018) {
     if (!soundOn) return;
     ensureAudio();
     const now = audioContext.currentTime;
-    const oscillator = audioContext.createOscillator();
-    const gain = audioContext.createGain();
-    oscillator.type = type;
-    oscillator.frequency.setValueAtTime(frequency, now);
-    oscillator.frequency.exponentialRampToValueAtTime(frequency * .82, now + duration);
-    gain.gain.setValueAtTime(volume, now);
-    gain.gain.exponentialRampToValueAtTime(.0001, now + duration);
-    oscillator.connect(gain).connect(audioContext.destination);
-    oscillator.start(now);
-    oscillator.stop(now + duration);
+    const master = audioContext.createGain();
+    const filter = audioContext.createBiquadFilter();
+    master.gain.setValueAtTime(.0001, now);
+    master.gain.exponentialRampToValueAtTime(volume, now + .008);
+    master.gain.exponentialRampToValueAtTime(.0001, now + duration);
+    filter.type = 'highpass';
+    filter.frequency.value = 260;
+    master.connect(filter).connect(audioContext.destination);
+
+    [[1, 1], [2.01, .34], [3.92, .12]].forEach(([ratio, level]) => {
+      const oscillator = audioContext.createOscillator();
+      const partial = audioContext.createGain();
+      oscillator.type = type;
+      oscillator.frequency.setValueAtTime(frequency * ratio, now);
+      partial.gain.value = level;
+      oscillator.connect(partial).connect(master);
+      oscillator.start(now);
+      oscillator.stop(now + duration);
+    });
   }
 
   function meow() {
@@ -61,7 +70,7 @@
     soundButton.setAttribute('aria-pressed', String(soundOn));
     soundButton.setAttribute('aria-label', soundOn ? 'Tắt âm thanh' : 'Bật âm thanh');
     soundLabel.textContent = soundOn ? 'Sound on' : 'Sound off';
-    if (soundOn) { ensureAudio(); tone(640, .22, 'sine', .02); }
+    if (soundOn) { ensureAudio(); tone(784, .8, 'sine', .014); setTimeout(() => tone(1046.5, .9, 'sine', .012), 110); }
   });
 
   function releaseHearts() {
@@ -116,7 +125,8 @@
       chime.classList.remove('hit');
       void chime.offsetWidth;
       chime.classList.add('hit');
-      tone(520 + index * 58, .35, 'sine', .018);
+      const notes = [1046.5, 1174.7, 880, 784, 987.8, 698.5];
+      tone(notes[index], 1.2, 'sine', .016);
     };
     chime.addEventListener('pointerenter', hit);
     chime.addEventListener('pointerdown', event => {
