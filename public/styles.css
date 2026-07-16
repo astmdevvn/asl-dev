@@ -1,4 +1,4 @@
-:root{--paper:#f1e7cd;--paper-deep:#e7d4ad;--ink:#20372e;--muted:#67776d;--jade:#2e6651;--jade-dark:#174837;--terracotta:#b14e36;--gold:#d9a941;--wood:#612f28;--line:rgba(32,55,46,.18);--serif:Georgia,'Times New Roman',serif;--sans:Arial,'Helvetica Neue',sans-serif}
+:root{--paper:#f1e7cd;--paper-deep:#e7d4ad;--ink:#20372e;--muted:#67776d;--jade:#2e6651;--jade-dark:#174837;--terracotta:#b14e36;--gold:#d9a941;--wood:#612f28;--line:rgba(32,55,46,.18);--serif:'Times New Roman','Noto Serif',serif;--sans:Arial,'Helvetica Neue',sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
@@ -110,3 +110,8 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 /* The paws now visually rest on the upper roof ledge, including during the sway. */
 .cat.cat-game{top:162px}
 @media(max-width:620px){.cat.cat-game{top:133px}}
+
+/* Vietnamese-safe typography: keep diacritics attached to their base glyphs. */
+.story h2{letter-spacing:-.025em;font-kerning:normal;text-rendering:optimizeLegibility}
+.story-grid .lead{font-family:var(--serif);font-kerning:normal;text-rendering:optimizeLegibility}
+.story-grid .story-closing{margin-top:28px;color:var(--ink);font-size:15px;line-height:1.65}
