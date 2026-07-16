@@ -36,3 +36,17 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 @keyframes catGameGlint{0%,100%{opacity:0;transform:translateX(-5px) rotate(-28deg) scale(.6)}45%{opacity:1;transform:translateX(7px) rotate(-28deg) scale(1)}}
 @media(max-width:620px){.cat.cat-game{left:36%;top:102px;width:165px;height:165px;animation-name:catGameSwayMobile}.cat-game .cat-pupil{top:63px;width:14px;height:16px}.cat-game .cat-pupil-left{left:55px}.cat-game .cat-pupil-right{left:94px}.cat.cat-game.sleeping{transform:translateX(-50%) scale(.85) translateY(26px) rotate(-8deg)}}
 @keyframes catGameSwayMobile{0%,100%{transform:translateX(-50%) scale(.85) rotate(-7deg)}50%{transform:translateX(-50%) scale(.85) rotate(-3deg) translateY(-2px)}}
+
+/* Pose-based mascot sizing: no rotation or squash is used to fake sleep. */
+.cat.cat-game{left:38%;top:151px;width:148px;height:148px}
+.cat-game .cat-sitting{position:absolute;inset:0;opacity:1}
+.cat-game .cat-sleeping-pose{position:absolute;width:244px;height:122px;max-width:none;left:-40px;top:37px;object-fit:contain;opacity:0;transform:none;transition:opacity .28s ease,transform .35s ease;pointer-events:none}
+.cat-game.sleeping .cat-sitting{opacity:0;transform:translateY(7px) scale(.94)}
+.cat-game.sleeping .cat-sleeping-pose{opacity:1;transform:translateY(0)}
+.cat.cat-game.sleeping{transform:translateX(-50%) rotate(-4deg);filter:drop-shadow(0 8px 7px rgba(39,38,24,.16))}
+.cat-game.sleeping img{filter:none}
+.cat-game.sleeping .cat-pupil,.cat-game.sleeping .cat-glint{opacity:0}
+.cat-game .cat-pupil{top:57px;width:13px;height:15px}
+.cat-game .cat-pupil-left{left:49px}.cat-game .cat-pupil-right{left:85px}
+.cat-game .zzz{right:-47px;top:35px}
+@media(max-width:620px){.cat.cat-game{left:36%;top:124px;width:128px;height:128px}.cat-game .cat-sleeping-pose{width:205px;height:103px;left:-33px;top:31px}.cat-game .cat-pupil{top:49px;width:11px;height:13px}.cat-game .cat-pupil-left{left:42px}.cat-game .cat-pupil-right{left:73px}.cat.cat-game.sleeping{transform:translateX(-50%) rotate(-4deg)}.cat-game .zzz{right:-42px;top:28px}}
