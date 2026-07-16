@@ -16,3 +16,20 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 @media(max-width:620px){.topbar{height:70px}.sound-label{display:none}.hero{min-height:880px;padding-left:18px;padding-right:18px}.hero h1{font-size:50px}.intro{font-size:13px}.scene{height:470px}.roof{width:490px;top:190px;transform:translateX(-50%) scale(.82);transform-origin:top center}.cat{top:64px;transform:translateX(-50%) scale(.85);animation-name:cat-sway-mobile}.chimes{top:338px;width:360px;gap:7px;transform:translateX(-50%) scale(.76)}.speech{top:45px}.scene-hint{bottom:4px}.story,.work{padding:90px 22px}.story h2,.work h2{font-size:44px}.product-grid{grid-template-columns:1fr}.product-featured{grid-column:span 1}.product{min-height:430px}.product-visual,.pos-visual{min-height:300px}.receipt{width:90px;height:145px;padding:20px 12px}.product-copy{padding:28px}.section-head{margin-bottom:35px}.contact{padding-top:100px}.contact-sun{width:330px;height:330px}footer{height:auto;min-height:120px;gap:12px;flex-direction:column;justify-content:center}.cloud,.leaf{display:none}}@keyframes cat-sway-mobile{0%,100%{transform:translateX(-50%) scale(.85) rotate(-3deg)}50%{transform:translateX(-50%) scale(.85) rotate(4deg)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
 @media(prefers-color-scheme:dark){:root{--paper:#152b23;--paper-deep:#1b3429;--ink:#eddfbf;--muted:#aebcaf;--line:rgba(237,223,191,.17)}body::before{background:radial-gradient(circle at 70% 15%,rgba(210,92,62,.12),transparent 25%)}.story{background:#1a3329}.work{background:#132b22}.product{background:rgba(255,255,255,.025)}.product:hover{background:rgba(255,255,255,.06)}.hero::after{background:linear-gradient(176deg,transparent 49%,rgba(95,140,105,.08) 50%)}.sound-toggle{background:rgba(255,255,255,.04)}.speech{color:#20372e}.grain{opacity:.08}}
+
+/* The original Meow Tap Away 2D mascot, kept intact and animated as one illustration. */
+.cat.cat-game{top:88px;width:180px;height:180px;overflow:visible;animation:catGameSway 5.8s ease-in-out infinite;filter:drop-shadow(0 13px 9px rgba(39,38,24,.2))}
+.cat-game img{display:block;width:100%;height:100%;object-fit:contain;user-select:none;transform-origin:50% 76%;transition:transform .3s cubic-bezier(.2,.9,.3,1)}
+.cat-game .cat-glint{position:absolute;width:11px;height:5px;border-radius:50%;background:rgba(255,255,255,.78);left:57px;top:61px;opacity:0;transform:rotate(-28deg)}
+.cat-game:hover img{transform:translateY(-3px) scale(1.025)}
+.cat-game.tilt img{transform:rotate(9deg) translate(5px,-3px) scale(1.035)}
+.cat-game.waving img{animation:catGameWave .55s ease-in-out 3}
+.cat-game.waving .cat-glint{animation:catGameGlint .75s ease-out 2}
+.cat.cat-game.sleeping{animation:none;transform:translateX(-50%) translateY(29px) rotate(-8deg);filter:drop-shadow(0 8px 7px rgba(39,38,24,.16))}
+.cat-game.sleeping img{transform:scaleY(.82) rotate(-4deg);transform-origin:50% 88%;filter:saturate(.9)}
+.cat-game .zzz{right:-12px;top:11px}
+@keyframes catGameSway{0%,100%{transform:translateX(-50%) rotate(-2.5deg) translateY(1px)}50%{transform:translateX(-50%) rotate(2.5deg) translateY(-2px)}}
+@keyframes catGameWave{0%,100%{transform:rotate(0) translateY(0)}30%{transform:rotate(-5deg) translateY(-7px)}65%{transform:rotate(4deg) translateY(-3px)}}
+@keyframes catGameGlint{0%,100%{opacity:0;transform:translateX(-5px) rotate(-28deg) scale(.6)}45%{opacity:1;transform:translateX(7px) rotate(-28deg) scale(1)}}
+@media(max-width:620px){.cat.cat-game{top:47px;width:165px;height:165px;animation-name:catGameSwayMobile}.cat.cat-game.sleeping{transform:translateX(-50%) scale(.85) translateY(26px) rotate(-8deg)}}
+@keyframes catGameSwayMobile{0%,100%{transform:translateX(-50%) scale(.85) rotate(-2.5deg)}50%{transform:translateX(-50%) scale(.85) rotate(2.5deg) translateY(-2px)}}
