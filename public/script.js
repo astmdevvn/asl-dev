@@ -5,7 +5,7 @@
   const soundButton = document.querySelector('.sound-toggle');
   const soundLabel = document.querySelector('.sound-label');
   const chimes = [...document.querySelectorAll('.chime')];
-  const eyes = [...document.querySelectorAll('.eye i')];
+  const eyes = [...document.querySelectorAll('.cat-pupil')];
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let audioContext;
   let soundOn = false;
@@ -114,8 +114,8 @@
   if (!reducedMotion) {
     addEventListener('pointermove', event => {
       const rect = cat.getBoundingClientRect();
-      const x = Math.max(-2.5, Math.min(2.5, (event.clientX - (rect.left + rect.width / 2)) / 70));
-      const y = Math.max(-2, Math.min(2, (event.clientY - (rect.top + rect.height / 2)) / 70));
+      const x = Math.max(-3.5, Math.min(3.5, (event.clientX - (rect.left + rect.width / 2)) / 55));
+      const y = Math.max(-3, Math.min(3, (event.clientY - (rect.top + rect.height / 2)) / 55));
       eyes.forEach(eye => { eye.style.setProperty('--eye-x', `${x}px`); eye.style.setProperty('--eye-y', `${y}px`); });
     }, { passive: true });
   }
