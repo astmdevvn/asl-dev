@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#efe3c4" />
+    <meta name="description" content="ASL Dev — những sản phẩm nhỏ, hữu ích và được làm bằng sự tò mò." />
+    <title>ASL Dev — A quiet corner on the web</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="ASL Dev, về đầu trang">
+        <span class="brand-mark">ASL</span><span>.dev</span>
+      </a>
+      <nav aria-label="Điều hướng chính">
+        <a href="#story">About</a>
+        <a href="#work">Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Bật âm thanh">
+        <span class="sound-dot" aria-hidden="true"></span><span class="sound-label">Sound off</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="sun" aria-hidden="true"></div>
+        <div class="cloud cloud-one" aria-hidden="true"></div>
+        <div class="cloud cloud-two" aria-hidden="true"></div>
+        <div class="leaf leaf-one" aria-hidden="true">⌁</div>
+        <div class="leaf leaf-two" aria-hidden="true">⌁</div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">A quiet corner on the web</p>
+          <h1 id="hero-title">Ideas made<br /><em>with curiosity.</em></h1>
+          <p class="intro">Một góc nhỏ cho những ứng dụng hữu ích, những thử nghiệm kỳ lạ và niềm vui khi tự tay làm ra mọi thứ.</p>
+          <a class="discover" href="#work">Khám phá sản phẩm <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="scene" aria-label="Mèo ASL ngồi trên mái đình, bên dưới là chuông gió mang chữ ASLDEV">
+          <div class="speech" role="status">Welcome to ASL Dev!</div>
+          <div class="hearts" aria-hidden="true"></div>
+          <button class="cat" type="button" aria-label="Chạm vào mèo" title="Say hello">
+            <span class="zzz" aria-hidden="true">Zzz...</span>
+            <span class="tail" aria-hidden="true"></span>
+            <span class="body" aria-hidden="true"><span class="chest"></span></span>
+            <span class="head" aria-hidden="true">
+              <span class="ear ear-left"></span><span class="ear ear-right"></span>
+              <span class="face"><span class="eye eye-left"><i></i></span><span class="eye eye-right"><i></i></span><span class="nose"></span><span class="mouth"></span></span>
+            </span>
+            <span class="paw" aria-hidden="true"></span>
+          </button>
+
+          <div class="roof" aria-hidden="true">
+            <div class="finial"></div>
+            <div class="roof-upper"><i></i></div>
+            <div class="roof-ridge"></div>
+            <div class="roof-main"><span class="tiles"></span></div>
+            <div class="eave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="beam"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+
+          <div class="chimes" aria-label="Chuông gió ASLDEV">
+            <div class="chime" style="--i:0;--len:42px"><span class="cord"></span><span class="letter">A</span><i></i></div>
+            <div class="chime" style="--i:1;--len:66px"><span class="cord"></span><span class="letter">S</span><i></i></div>
+            <div class="chime" style="--i:2;--len:51px"><span class="cord"></span><span class="letter">L</span><i></i></div>
+            <div class="chime" style="--i:3;--len:73px"><span class="cord"></span><span class="letter">D</span><i></i></div>
+            <div class="chime" style="--i:4;--len:48px"><span class="cord"></span><span class="letter">E</span><i></i></div>
+            <div class="chime" style="--i:5;--len:61px"><span class="cord"></span><span class="letter">V</span><i></i></div>
+          </div>
+        </div>
+        <p class="scene-hint"><span></span> Chạm vào mèo để chào nhau</p>
+      </section>
+
+      <section class="story" id="story">
+        <p class="section-index">01 · Chuyện của ASL</p>
+        <div class="story-grid">
+          <h2>Không chỉ là<br />phần mềm.</h2>
+          <div>
+            <p class="lead">ASL Dev là nơi công nghệ gặp sự tò mò — những sản phẩm được tạo ra để giải quyết vấn đề thật, nhưng vẫn giữ một chút tinh nghịch.</p>
+            <p>Mỗi dự án bắt đầu từ một câu hỏi nhỏ: “Nếu mình làm nó đơn giản hơn, riêng tư hơn, hoặc vui hơn thì sao?”</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="section-head">
+          <div><p class="section-index">02 · Sản phẩm</p><h2 id="work-title">Things we’ve made.</h2></div>
+          <p>Những công cụ nhỏ với mục đích rõ ràng.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product product-featured">
+            <div class="product-visual pos-visual" aria-hidden="true"><div class="device"><span></span><i></i><i></i><i></i></div><div class="receipt">ASL<br />······<br />TOTAL<br /><b>128</b></div></div>
+            <div class="product-copy"><span class="tag">Point of sale</span><h3>LocalPOS <sup>PRO</sup></h3><p>Ứng dụng bán hàng gọn nhẹ, chạy tại chỗ và tôn trọng dữ liệu của bạn.</p><div class="actions"><a href="#contact">Tìm hiểu <span>↗</span></a><a href="#contact">Download</a></div></div>
+          </article>
+          <article class="product">
+            <div class="product-visual shield-visual" aria-hidden="true"><div class="shield"><span>✓</span></div><i></i><i></i><i></i></div>
+            <div class="product-copy"><span class="tag">Security</span><h3>SWR</h3><p>Security Work Reader — đọc, kiểm tra và hiểu những gì đang diễn ra.</p><div class="actions"><a href="#contact">GitHub <span>↗</span></a></div></div>
+          </article>
+          <article class="product">
+            <div class="product-visual orbit-visual" aria-hidden="true"><div class="core">A</div><span></span><span></span><span></span></div>
+            <div class="product-copy"><span class="tag">Utilities</span><h3>ASO</h3><p>Một bộ công cụ nhỏ để sắp xếp công việc số theo cách tự nhiên hơn.</p><div class="actions"><a href="#contact">Khám phá <span>↗</span></a></div></div>
+          </article>
+          <article class="product">
+            <div class="product-visual camera-visual" aria-hidden="true"><div class="camera"><div class="lens"></div><span></span></div><i></i></div>
+            <div class="product-copy"><span class="tag">Computer vision</span><h3>AI Camera</h3><p>Thử nghiệm thị giác máy tính cho những tình huống ngoài đời thực.</p><div class="actions"><a href="#contact">Coming soon</a></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-sun" aria-hidden="true"></div>
+        <p class="section-index">03 · Ghé chơi</p>
+        <h2>Có một ý tưởng<br />thú vị?</h2>
+        <p>Hãy kể cho ASL nghe. Biết đâu chúng ta sẽ cùng làm ra một điều đáng nhớ.</p>
+        <a class="contact-link" href="mailto:hello@asl.dev">hello@asl.dev <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark">ASL</span><span>.dev</span></a>
+      <p>Made with <span aria-label="love">♥</span> and a curious cat.</p>
+      <p>© <span id="year"></span> ASL Dev</p>
+    </footer>
+  </body>
+</html>
