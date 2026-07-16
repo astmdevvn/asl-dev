@@ -88,3 +88,6 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 .chime .letter::after{content:"";position:absolute;left:12px;top:17px;width:17px;height:13px;border-top:1px solid rgba(70,35,20,.35);border-bottom:1px solid rgba(226,156,85,.2);transform:rotate(-20deg)}
 .chime .letter b{position:relative;z-index:2;font:600 20px/1 var(--serif);color:#f1d49a;text-shadow:0 1px #3c2116,-1px 0 rgba(53,29,18,.85),1px 0 rgba(240,190,116,.26)}
 @media(max-width:620px){.cat-game .cat-eye{top:44px;width:17px;height:20px}.cat-game .cat-eye-left{left:41px}.cat-game .cat-eye-right{left:70px}.cat-game .cat-eye .cat-pupil{left:5px;top:5px;width:7px;height:10px}.chime .letter{width:38px;height:46px}.chime .letter b{font-size:18px}}
+
+/* The sitting sprite now has genuinely blank eyes; wrappers only constrain pupil travel. */
+.cat-game .cat-eye{background:transparent}
