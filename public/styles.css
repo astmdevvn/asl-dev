@@ -93,3 +93,20 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 
 /* The sitting sprite now has genuinely blank eyes; wrappers only constrain pupil travel. */
 .cat-game .cat-eye{background:transparent}
+
+/* Weathered Vietnamese communal-house palette: mossed yin-yang tiles, aged bronze and faded vermilion. */
+.roof-main{background:linear-gradient(112deg,rgba(214,196,145,.08),transparent 24%,rgba(18,29,25,.18) 72%,rgba(224,202,145,.06)),repeating-linear-gradient(90deg,transparent 0 25px,rgba(15,32,27,.28) 26px 28px),linear-gradient(#50665b,#2c4138 66%,#22372f)}
+.roof-main::before,.roof-main::after{background:linear-gradient(145deg,#465c51,#263d34)}
+.roof-upper{background:linear-gradient(105deg,#53675c,#354b41 55%,#293e36)}
+.roof-upper i{border-top-color:rgba(218,200,151,.25);border-bottom-color:rgba(16,36,29,.72)}
+.roof-ridge{background:linear-gradient(#bd9144,#8b5d2e 58%,#6e4328);box-shadow:inset 0 -4px rgba(68,35,24,.3),inset 0 2px rgba(239,207,128,.2)}
+.roof-ridge::before,.roof-ridge::after{border-color:#aa7936}
+.finial{background:linear-gradient(90deg,#694228,#b7833d 45%,#7a4d2a 72%,#563523)}
+.eave{background:linear-gradient(#b8863d,#825127 65%,#684024);box-shadow:inset 0 2px rgba(232,194,112,.24)}
+.eave span{background:#71372f;border-color:#9f7132}
+.beam{background:linear-gradient(#68352f,#4e2927);border-top-color:#95642f}
+.beam i{background:linear-gradient(90deg,#3f2422,#6a3932,#3b211f)}
+
+/* The paws now visually rest on the upper roof ledge, including during the sway. */
+.cat.cat-game{top:162px}
+@media(max-width:620px){.cat.cat-game{top:133px}}
