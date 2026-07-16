@@ -59,3 +59,16 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 .cat-game .cat-eye .cat-pupil::after{content:"";position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;right:2px;bottom:3px}
 .cat-game.sleeping .cat-eye{opacity:0}
 @media(max-width:620px){.cat-game .cat-eye{top:39px;width:27px;height:32px;border-width:3px;box-shadow:0 0 0 3px #ffefd1}.cat-game .cat-eye-left{left:37px}.cat-game .cat-eye-right{left:67px}.cat-game .cat-eye .cat-pupil{left:5px;top:6px;width:12px;height:16px}}
+
+/* Wind chimes: metal bells above, engraved wooden plaques below. */
+.chimes{top:414px;width:430px;height:200px;gap:16px}
+.chime{width:52px;height:190px}
+.chime .cord{height:var(--len);background:linear-gradient(rgba(38,54,45,.72),rgba(38,54,45,.28))}
+.chime .bell{position:relative;display:block;width:27px;height:21px;margin:0 auto;background:linear-gradient(90deg,#9b682b 0,#f0ca67 24%,#c79339 58%,#81501f 100%);border:1px solid #75481f;border-radius:55% 55% 20% 20%;clip-path:polygon(27% 0,73% 0,82% 16%,94% 77%,100% 88%,0 88%,6% 77%,18% 16%);filter:drop-shadow(0 4px 3px rgba(59,39,21,.18))}
+.chime .bell::before{content:"";position:absolute;left:50%;top:-5px;width:7px;height:7px;border:2px solid #8a5927;border-bottom:0;border-radius:50% 50% 0 0;transform:translateX(-50%)}
+.chime .bell::after{content:"";position:absolute;left:50%;bottom:-3px;width:6px;height:6px;border-radius:50%;background:#7d4b25;transform:translateX(-50%)}
+.chime .hanger{display:block;width:1px;height:var(--drop);margin:0 auto;background:rgba(52,57,45,.53)}
+.chime .letter{position:relative;display:flex;width:48px;height:35px;margin:0 auto;border:1px solid #5e321e;border-radius:5px 7px 6px 4px;background:linear-gradient(100deg,#8a4f2c,#b8753e 36%,#94582f 72%,#704024);color:#f0d59b;font:600 21px/1 var(--serif);text-shadow:0 1px 0 #3d251b,-1px 0 rgba(55,31,21,.7),1px 0 rgba(235,188,119,.24);box-shadow:inset 0 0 0 2px rgba(235,181,103,.14),inset 0 -5px 10px rgba(56,28,19,.19),0 7px 10px rgba(44,35,24,.13);transform:rotate(calc((var(--i) - 2.5) * .6deg))}
+.chime .letter::before{content:"";position:absolute;left:6px;right:6px;top:6px;height:1px;background:rgba(238,190,117,.22);box-shadow:0 17px rgba(64,32,21,.2)}
+.chime>i{display:none}
+@media(max-width:620px){.chimes{top:334px;width:375px;height:190px;gap:10px}.chime{width:48px}.chime .letter{width:45px;height:33px;font-size:20px}.chime .bell{width:25px;height:20px}}
