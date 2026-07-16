@@ -24,9 +24,10 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 .cat-game .cat-pupil::after{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;left:3px;top:2px}
 .cat-game .cat-pupil-left{left:60px}.cat-game .cat-pupil-right{left:103px}
 .cat-game .cat-glint{position:absolute;width:11px;height:5px;border-radius:50%;background:rgba(255,255,255,.78);left:57px;top:61px;opacity:0;transform:rotate(-28deg)}
-.cat-game:hover img{transform:translateY(-3px) scale(1.025)}
-.cat-game.tilt img{transform:rotate(9deg) translate(5px,-3px) scale(1.035)}
-.cat-game.waving img{animation:catGameWave .55s ease-in-out 3}
+.cat-game .cat-awake{position:absolute;inset:0;display:block;transform-origin:50% 76%;transition:transform .3s cubic-bezier(.2,.9,.3,1),opacity .28s ease}
+.cat-game:hover .cat-awake{transform:translateY(-3px) scale(1.025)}
+.cat-game.tilt .cat-awake{transform:rotate(9deg) translate(5px,-3px) scale(1.035)}
+.cat-game.waving .cat-awake{animation:catGameWave .55s ease-in-out 3}
 .cat-game.waving .cat-glint{animation:catGameGlint .75s ease-out 2}
 .cat.cat-game.sleeping{animation:none;transform:translateX(-50%) translateY(29px) rotate(-8deg);filter:drop-shadow(0 8px 7px rgba(39,38,24,.16))}
 .cat-game.sleeping img{transform:scaleY(.82) rotate(-4deg);transform-origin:50% 88%;filter:saturate(.9)}
@@ -42,6 +43,7 @@ a{color:inherit;text-decoration:none}.topbar{height:84px;display:flex;align-item
 .cat-game .cat-sitting{position:absolute;inset:0;opacity:1}
 .cat-game .cat-sleeping-pose{position:absolute;width:244px;height:122px;max-width:none;left:-40px;top:37px;object-fit:contain;opacity:0;transform:none;transition:opacity .28s ease,transform .35s ease;pointer-events:none}
 .cat-game.sleeping .cat-sitting{opacity:0;transform:translateY(7px) scale(.94)}
+.cat-game.sleeping .cat-awake{opacity:0;transform:translateY(7px) scale(.94);pointer-events:none}
 .cat-game.sleeping .cat-sleeping-pose{opacity:1;transform:translateY(0)}
 .cat.cat-game.sleeping{transform:translateX(-50%) rotate(-4deg);filter:drop-shadow(0 8px 7px rgba(39,38,24,.16))}
 .cat-game.sleeping img{filter:none}
